@@ -1,0 +1,18 @@
+// ширина с учётом и отступов и падингов
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto; // выравниваю по центру
+}
+
+.hidden {
+  display: none; // для скрывания объектов через js
+}

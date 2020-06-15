@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>w-store</title>
+  <link rel="stylesheet" href="style-css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+
+      <div class="header__logo">
+        W-STORE
+      </div>
+
+      <form class="header__search">
+
+        <div class="header__search-input-wrapper">
+          <input class="header__search-input" type="text" placeholder="Search goods">
+        </div>
+
+        <div class="header__search-dropdown">
+
+          <div data-select class="header-select">
+
+            <div data-select-title class="header-select__title">CATEGORY</div>
+            <div class="header-select__dropdown hidden"> <!-- toggle-style класс -->
+              <div data-select-item="Mobile" class="header-select__dropdown-item">Mobile</div> <!-- атрибуты у элементов. Ввожу для управления ими через js -->
+              <div data-select-item="Tablet" class="header-select__dropdown-item">Tablet</div>
+              <div data-select-item="Laptop" class="header-select__dropdown-item">Laptop</div>
+            </div>
+          </div>
+
+          <!-- продублировал select для возможности обработки его через js-->
+          <select name="" id="selectReal" class="hidden">
+            <option value="CATEGORY">CATEGORY</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Tablet">Tablet</option>
+            <option value="Laptop">Laptop</option>
+          </select>
+        </div>
+
+        <div class="header__search-button-wrapper">
+          <button class="header__search-button"type="submit">
+            <img src="img/svg/search-icon.svg" alt="search">
+            <!-- изображение картинкой или напрямую вставляя код svg -->
+          </button>
+        </div>
+      </form>
+
+      <div class="header__buttons">
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
