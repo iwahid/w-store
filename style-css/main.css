@@ -87,7 +87,12 @@ a:hover {
   .header__search {
     order: 3;
     width: 100%;
-    margin: 20px 15px 0 15px;
+    margin: 15px 15px 0px 15px;
+  }
+  .header__container {
+    padding: 0 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -96,6 +101,9 @@ a:hover {
   .header__container {
     flex-direction: column;
     align-content: center;
+  }
+  .header__logo {
+    margin: 15px 25px;
   }
 }
 
