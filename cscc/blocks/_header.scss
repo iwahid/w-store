@@ -58,26 +58,22 @@
   .header__search {
     order: 3;
     width: 100%;
-    margin: 20px 25px 0 25px;
+    margin: 20px 15px 0 15px;
   }
 }
 
 /* adaptive of second line */
 @media screen and (max-width: 510px) {
-  
-    .header__search {
-      order: 3;
-      width: 100%;
-      margin: 20px 25px 0 25px;
-    }
-  
-  
+  .header__container {
+    flex-direction: column;
+    align-content: center;
+  }
 }
 
 .header__search-input-wrapper {
   display: flex;
   align-items: center;
-  width: 70%; /* потом заадаптивить */
+  width: 80%; /* потом заадаптивить */
   border-right: 2px solid #f5f5f5;
 }
 
