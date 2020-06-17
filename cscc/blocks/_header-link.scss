@@ -1,0 +1,57 @@
+.header__links{
+  position: relative;
+  display: flex;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+ /*  width: 120px; */
+  position: relative;
+  color: #808080;
+  &:hover {
+    color: $blue;
+
+    .icon-svg {
+      fill: $blue;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 90%;
+      height: 2px;
+      background-color: $blue;
+    }
+  }
+}
+.icon-svg {
+  fill: #808080;
+}
+
+/* из-за разного размера иконок, делаю общий контейнер для каждой из них */
+.header-link__icon {
+  width: 21px;
+  height: 21px;
+  margin-right: 15px;
+
+  position: relative;
+}
+.header-link_notify .header-link__icon::after {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $blue;
+}
+.header-link__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.14;
+}

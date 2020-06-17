@@ -19,6 +19,7 @@
 
   &::after {
     position: absolute;
+    z-index: 10000;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
@@ -58,5 +59,23 @@
   }
   &:hover {
     background-color: #f0f0f0;
+   /*  color: $blue; */
+  }
+}
+
+
+/* модификатор */
+.header-select.header-select_nav {
+ /*  width: auto; */
+ padding: 0 30px;
+
+  .header-select__title {
+    font-size: 14px;
+    text-transform: none;
+    color: #b3b3b3;
+    font-weight: 500;
+    line-height: 1;
+    width: auto;
+    padding-right: 20px;
   }
 }

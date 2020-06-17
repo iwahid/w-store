@@ -16,3 +16,11 @@ body {
 .hidden {
   display: none; // для скрывания объектов через js
 }
+
+a{
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: $blue;
+  }
+}
