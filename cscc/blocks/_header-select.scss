@@ -8,8 +8,9 @@
   cursor: pointer;
 }
 .header-select__title {
-  position: relative;
-  width: 83px;
+  position: relative;/* 
+  width: 83px; */
+  padding-right: 20px;
   color: #b3b3b3;
   font-size: 10px;
   font-weight: 900;

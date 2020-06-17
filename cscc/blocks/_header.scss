@@ -9,11 +9,18 @@
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   align-items: center;
   padding: 0 5px;
   padding-top: 30px;
   padding-bottom: 38px;
+}
+
+@media screen and (max-width: 1120px) {
+  .header{
+    /* background-color: red; */
+  }
 }
 
 .header__logo {
@@ -23,23 +30,43 @@
   line-height: 1; //1.36 - множитель междустрочного интервала. В однострочных надо убирать
   text-transform: uppercase;
   letter-spacing: 1.76px; //1.36 - множитель мебуквенного интервала.
+  margin: 0 25px;
+  order: 0;
 }
 
 .header__search {
-  width: 468px; /* потом заадаптивить */
   height: 50px;
   border-radius: 4px;
   border: 2px solid #f5f5f5;
-
   display: flex;
+  width: 50%;
+  order: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__search {
+    
+    width: 45%;
+  }
+}
+@media screen and (max-width: 910px) {
+  .header__search {
+    
+    width: 40%;
+  }
+}
+@media screen and (max-width: 880px) {
+  .header__search {
+    order: 3;
+    width: 100%;
+    margin: 20px 25px 0 25px;
+  }
 }
 
 .header__search-input-wrapper {
   display: flex;
   align-items: center;
-  width: 278px; /* потом заадаптивить */
- /*  padding-left: 20px;
-  padding-right: 20px; */
+  width: 70%; /* потом заадаптивить */
   border-right: 2px solid #f5f5f5;
 }
 
@@ -58,13 +85,12 @@
   }
 }
 
-
 .header__search-dropdown {
   display: flex;
   justify-content: center;
   align-items: center;
   border-right: 2px solid #f5f5f5;
-  width: 142px;
+  padding: 0 20px;
 }
 
 .header__search-button-wrapper {
@@ -74,7 +100,7 @@
 .header__search-button {
   background-color: transparent;
   border: none;
-  width: 100%; //в пределах контейнера
+  width: 46px; //в пределах контейнера
   height: 100%;
   display: flex; //для картинки внутри
   justify-content: center;
@@ -84,9 +110,6 @@
 .header__buttons {
 }
 
-
 .header__nav {
   border-top: 2px solid #f5f5f5;
-  
-
 }
