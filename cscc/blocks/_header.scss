@@ -43,15 +43,14 @@
   order: 1;
 }
 
+/* adaptive first line of the header */
 @media screen and (max-width: 1000px) {
   .header__search {
-    
     width: 45%;
   }
 }
 @media screen and (max-width: 910px) {
   .header__search {
-    
     width: 40%;
   }
 }
@@ -61,6 +60,18 @@
     width: 100%;
     margin: 20px 25px 0 25px;
   }
+}
+
+/* adaptive of second line */
+@media screen and (max-width: 510px) {
+  
+    .header__search {
+      order: 3;
+      width: 100%;
+      margin: 20px 25px 0 25px;
+    }
+  
+  
 }
 
 .header__search-input-wrapper {
