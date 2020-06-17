@@ -7,7 +7,7 @@ $border: 2px solid #f5f5f5;
   border-right: $border;
   max-width: 1100px;
   margin: 0 auto; /* не выравнится по центру, если у него нет фиксированной ширины */
-  height: 60px;
+  min-height: 60px;
 }
 
 /* три блока ниже надо будет адаптировать либо через процент от ширины, либо флекс размерами */
@@ -15,10 +15,12 @@ $border: 2px solid #f5f5f5;
 .header-nav__categories {
   border-right: $border;
   width: 200px;
-  
+  min-width: 150px;
+  order: 0;
 }
 
 .header-nav__deals {
+  order: 1;
   text-decoration: none;
   display: flex;
   justify-content: flex-start;
@@ -26,7 +28,6 @@ $border: 2px solid #f5f5f5;
   border-right: $border;
   padding: 0 25px;
   flex-grow: 1;
-  
 }
 .header-nav__link {
   display: flex;
@@ -40,16 +41,13 @@ $border: 2px solid #f5f5f5;
   position: relative;
   color: #808080;
   padding: 0 15px;
+  text-align: center;
+  line-height: 1.5;
   &:not(:last-child) {
-    
   }
 
   &:hover {
     color: $blue;
-   /*  svg {
-      fill: $blue;
-    } */
-
     &::after {
       position: absolute;
       content: "";
@@ -60,16 +58,49 @@ $border: 2px solid #f5f5f5;
       background-color: blue;
     }
   }
-  
 }
 
 .header-nav__select {
- display: flex;
+  display: flex;
+  order: 2;
 }
 
-
 .header-nav__select-item {
-  &:not(:last-child){
+  &:not(:last-child) {
     border-right: $border;
   }
+}
+
+@media screen and (max-width: 940px) {
+  .header-nav {
+    flex-wrap: wrap;
+    height: 120px;
+  }
+
+  .header-nav__categories {
+    order: 0;
+  }
+
+  .header-nav__deals {
+    border-top: $border;
+    order: 3;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+  }
+ 
+}
+
+@media screen and (max-width: 590px) {
+  .header-nav__categories {
+    width: 100%;
+    border-bottom: $border;
+    border-right: none;
+  }
+  .header-nav__select-item {
+    width: 44%;
+  }
+}
+@media screen and (max-width: 550px) {
+ 
 }

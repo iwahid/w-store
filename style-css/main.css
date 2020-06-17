@@ -137,6 +137,7 @@ a:hover {
   align-items: center;
   border-right: 2px solid #f5f5f5;
   padding: 0 20px;
+  width: 135px;
 }
 
 .header__search-button-wrapper {
@@ -198,11 +199,12 @@ a:hover {
 .header-select__dropdown {
   position: absolute;
   top: 100%;
-  left: -2px;
+  left: -22px;
   right: -2px;
   border: 2px solid #f5f5f5;
   border-radius: 0 0 4px 4px;
   background-color: white;
+  width: 135px;
 }
 
 .header-select__dropdown-item {
@@ -314,7 +316,7 @@ a:hover {
   max-width: 1100px;
   margin: 0 auto;
   /* не выравнится по центру, если у него нет фиксированной ширины */
-  height: 60px;
+  min-height: 60px;
 }
 
 /* три блока ниже надо будет адаптировать либо через процент от ширины, либо флекс размерами */
@@ -322,9 +324,12 @@ a:hover {
 .header-nav__categories {
   border-right: 2px solid #f5f5f5;
   width: 200px;
+  min-width: 150px;
+  order: 0;
 }
 
 .header-nav__deals {
+  order: 1;
   text-decoration: none;
   display: flex;
   justify-content: flex-start;
@@ -346,13 +351,12 @@ a:hover {
   position: relative;
   color: #808080;
   padding: 0 15px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .header-nav__link:hover {
   color: #1875f0;
-  /*  svg {
-      fill: $blue;
-    } */
 }
 
 .header-nav__link:hover::after {
@@ -367,10 +371,39 @@ a:hover {
 
 .header-nav__select {
   display: flex;
+  order: 2;
 }
 
 .header-nav__select-item:not(:last-child) {
   border-right: 2px solid #f5f5f5;
+}
+
+@media screen and (max-width: 940px) {
+  .header-nav {
+    flex-wrap: wrap;
+    height: 120px;
+  }
+  .header-nav__categories {
+    order: 0;
+  }
+  .header-nav__deals {
+    border-top: 2px solid #f5f5f5;
+    order: 3;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .header-nav__categories {
+    width: 100%;
+    border-bottom: 2px solid #f5f5f5;
+    border-right: none;
+  }
+  .header-nav__select-item {
+    width: 44%;
+  }
 }
 
 .header-mega-menu-link {
