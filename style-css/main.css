@@ -6,7 +6,7 @@
 body {
   background-color: #fafafa;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -27,9 +27,23 @@ a:hover {
   color: #1875f0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1;
+}
+
 .header {
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
 }
 
 .header__container {
@@ -350,6 +364,14 @@ a:hover {
 
 .header-nav__select {
   display: flex;
+<<<<<<< Updated upstream
+=======
+  justify-content: flex-end;
+  /* align-items: center; */
+  align-content: center;
+  /*  align-self: center; */
+  order: 2;
+>>>>>>> Stashed changes
 }
 
 .header-nav__select-item:not(:last-child) {
@@ -485,4 +507,41 @@ a.nav-dropdown__dropdown-item:last-child {
 
 a.nav-dropdown__dropdown-item:hover {
   background-color: #f0f0f0;
+}
+
+.carousel-section {
+  margin-bottom: 30px;
+}
+
+.carousel__item {
+  width: 100%;
+  height: 330px;
+  background-image: url("./../../../img/img/image.jpg"), linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  /* затемнение */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* подстраховка */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.carousel__item-title {
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.carousel__item-text {
+  opacity: 0.5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.14;
 }

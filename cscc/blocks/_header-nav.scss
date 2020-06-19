@@ -64,7 +64,16 @@ $border: 2px solid #f5f5f5;
 }
 
 .header-nav__select {
+<<<<<<< Updated upstream
  display: flex;
+=======
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+  align-content: center;
+ /*  align-self: center; */
+  order: 2;
+>>>>>>> Stashed changes
 }
 
 
@@ -72,4 +81,5 @@ $border: 2px solid #f5f5f5;
   &:not(:last-child){
     border-right: $border;
   }
+
 }
