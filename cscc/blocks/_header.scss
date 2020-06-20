@@ -44,15 +44,14 @@
   order: 1;
 }
 
+/* adaptive first line of the header */
 @media screen and (max-width: 1000px) {
   .header__search {
-    
     width: 45%;
   }
 }
 @media screen and (max-width: 910px) {
   .header__search {
-    
     width: 40%;
   }
 }
@@ -60,14 +59,30 @@
   .header__search {
     order: 3;
     width: 100%;
-    margin: 20px 25px 0 25px;
+    margin: 15px 15px 0px 15px;
+  }
+  .header__container {
+    padding: 0 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* adaptive of second line */
+@media screen and (max-width: 510px) {
+  .header__container {
+    flex-direction: column;
+    align-content: center;
+  }
+  .header__logo {
+    margin: 15px 25px;
   }
 }
 
 .header__search-input-wrapper {
   display: flex;
   align-items: center;
-  width: 70%; /* потом заадаптивить */
+  width: 80%; /* потом заадаптивить */
   border-right: 2px solid #f5f5f5;
 }
 
@@ -92,6 +107,7 @@
   align-items: center;
   border-right: 2px solid #f5f5f5;
   padding: 0 20px;
+  width: 135px ;
 }
 
 .header__search-button-wrapper {
