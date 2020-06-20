@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>w-store</title>
   <link rel="stylesheet" href="style-css/main.css">
+  <link rel="stylesheet" href="cscc/slider/swiper.css"><!-- стили только для слайдера -->
+  <link rel="stylesheet" href="cscc/slider/default-styles.css"><!-- стили только для слайдера -->
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
@@ -193,9 +196,25 @@
       </div>
     </div>
   </header>
+  <!-- <section class="slider"> -->
+  <div class="slider-container">
+    <div class="swiper-container">
+      <!-- наименование не обязательно -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">1</div><!-- стили в default-styles -->
+        <div class="swiper-slide card">2</div>
+        <div class="swiper-slide card">33</div>
+        <div class="swiper-slide card">4</div>
+      </div>
+
+    </div>
+  </div>
 
 
-  <script src="js/header-select.js"></script>
+
+  <script src="js/header-select.js"></script> <!-- search field -->
+  <script src="js/slider/swiper.min.js"></script><!-- библиотека -->
+  <script src="js/slider/slider.js"></script><!-- инициализация свайпера -->
 </body>
 
 </html>
