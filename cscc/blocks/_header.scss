@@ -19,7 +19,7 @@
 }
 
 @media screen and (max-width: 1120px) {
-  .header{
+  .header {
     /* background-color: red; */
   }
 }
@@ -42,6 +42,7 @@
   display: flex;
   width: 50%;
   order: 1;
+  
 }
 
 /* adaptive first line of the header */
@@ -96,6 +97,11 @@
   height: 46px;
   width: 100%;
   padding: 0 10px;
+
+  /* снятие выделения */
+  &:focus {
+    outline: none;
+  }
   &::placeholder {
     color: #b3b3b3;
   }
@@ -107,7 +113,7 @@
   align-items: center;
   border-right: 2px solid #f5f5f5;
   padding: 0 20px;
-  width: 135px ;
+  width: 135px;
 }
 
 .header__search-button-wrapper {

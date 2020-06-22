@@ -59,6 +59,7 @@
   /*  opacity: 0.1; */
   background-size: 20px 20px;
   outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);/* синяя обводка на тачскринах */
 }
 
 .swiper-button-prev::after,

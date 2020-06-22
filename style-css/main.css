@@ -139,6 +139,11 @@ p {
   height: 46px;
   width: 100%;
   padding: 0 10px;
+  /* снятие выделения */
+}
+
+.header__search-input:focus {
+  outline: none;
 }
 
 .header__search-input::placeholder {
@@ -1238,6 +1243,8 @@ button.swiper-pagination-bullet {
   /*  opacity: 0.1; */
   background-size: 20px 20px;
   outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* синяя обводка на тачскринах */
 }
 
 .swiper-button-prev::after,
