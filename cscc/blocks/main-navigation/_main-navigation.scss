@@ -1,0 +1,56 @@
+.main__navigation {
+  width: 100%;
+}
+.main__navigation-item {
+}
+.navigation-item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 58px;
+  width: 100%;
+  border-bottom: 2px solid #f5f5f5;
+  padding: 0 20px 0 17px;
+  cursor: pointer;
+  transition: $border-animation;
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 17px;
+    transition: $fill-animation;
+    fill: $icon-fill;
+  }
+  &__title {
+    color: #808080;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+
+    transition: $text-animation;
+  }
+  &__arrow-icon {
+    margin-left: auto;
+    transition: $fill-animation;
+    fill: $icon-fill;
+  }
+  &:hover{
+    border-bottom: 2px solid $blue;
+    transition: $border-animation;
+    
+    .navigation-item__icon{
+      fill: $blue;
+      transition: $fill-animation;
+    }
+    .navigation-item__title{
+      color: $blue;
+      transition: $text-animation;
+    }
+    .navigation-item__arrow-icon{
+      fill: $blue;
+      transition: $fill-animation;
+    }
+  }
+}
