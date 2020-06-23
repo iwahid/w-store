@@ -12,6 +12,7 @@ body {
 .container {
   max-width: 1110px;
   margin: 0 auto;
+  padding: 0 5px;
 }
 
 .hidden {
@@ -1357,14 +1358,14 @@ button.swiper-pagination-bullet {
 }
 
 .promo-section__col {
-  width: 31%;
+  width: 32%;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  margin: 0 auto;
+  /*  margin: 0 auto; */
 }
 
 .promo-section__col:not(:last-child) {
-  margin-right: 25px;
+  /* margin-right: 25px; */
   background-color: #fff;
 }
 

@@ -6,12 +6,12 @@
     flex-wrap: wrap;
   }
   &__col {
-    width: 31%;
+    width: 32%;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    margin: 0 auto;
+   /*  margin: 0 auto; */
     &:not(:last-child) {
-      margin-right: 25px;
+      /* margin-right: 25px; */
       background-color: #fff;
     }
   }
