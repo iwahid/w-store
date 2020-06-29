@@ -1,0 +1,79 @@
+.tabs-section {
+  position: relative;
+  overflow: visible;
+  &__btn-box {
+    display: flex;
+    width: 100%;
+    height: 60px;
+
+    background-color: #ffffff;
+
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+  }
+  &__btn {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #808080;
+    padding: 14px 5px;
+    margin-left: 40px;
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    align-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 0px; /* выравнивание текста в кнопке */
+
+    &:hover {
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background-color: $blue;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /* модификатор, потому что это не просто ссылка или кнопка, а это таб, остающийся активным, после его выбора */
+  &__btn_active {
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 2px;
+      background-color: $blue;
+    }
+  }
+}
+
+.tabs-section__content-box {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+
+.tabs-section__content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  transform: translateY(-200%);
+}
+
+
+#content-1 {
+  transform: translateY(0);
+}
