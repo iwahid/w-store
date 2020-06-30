@@ -1517,10 +1517,6 @@ button.swiper-pagination-bullet {
   }
 }
 
-/* .main {
-  background-color: #ddd;
-}
- */
 .main__content {
   /*  background-color: #aaa; */
   margin-bottom: 30px;
@@ -1729,6 +1725,7 @@ button.swiper-pagination-bullet {
   здесь, и ниже, реализован хак, что бы в постоянно иметь в контейнере карточки, с выравниванием по краям без отступов (от стенок контейнера). Это можно было бы сделать margin при статической вёрстке, но это не сработает при адаптиве */
   margin-left: -24px;
   width: calc(100% + 24px);
+  transition: opacity 1s;
 }
 
 .product-card {
@@ -1847,39 +1844,12 @@ button.swiper-pagination-bullet {
   margin-right: 18px;
 }
 
-.rating {
+.tabs-section__content-box_custom {
   display: flex;
   justify-content: center;
 }
 
-/* 
-@media screen and (max-width: 1020px) {
-  .product-card {
-    
-    &:nth-child(3n) {
-      margin-right: 24px;
-    }
-    &:nth-child(2n) {
-      margin-right: 0;
-    } */
-/*  &:nth-child(6) {
-      margin-right: 24px;
-    }
-    &:last-child{
-      margin-right: 0;
-    } */
-/*   }  
-} */
-/* @media screen and (max-width: 770px) {
-  .product-card {margin-right: 0;
-    &:nth-child(1) {
-      
-    }
-  }  
+.rating {
+  display: flex;
+  justify-content: center;
 }
-
-@media screen and (max-width: 750px) {
-  .product-card {
-    margin-right: 0;
-  }  
-} */

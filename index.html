@@ -423,15 +423,19 @@
         <div class="main-content__column-right">
 
           <!-- tab-section -->
-          <div class="tabs-section__btn-box">
+          <!--  <div class="tabs-section__btn-box">
             <button class="tabs-section__btn tabs-section__btn_active" id="btn-1" onclick="openHTML()">Most
               Popular</button>
             <button class="tabs-section__btn" id="btn-2" onclick="openCSS()">My communities</button>
-            <!-- <button id="btn-3" onclick="openJS()">JS</button> -->
+          </div> -->
+
+          <div class="tabs-section__btn-box">
+            <button class="tabs-section__btn tabs-section__btn_active">Most Popular</button>
+            <button class="tabs-section__btn">My communities</button>
           </div>
 
           <!-- это элемент секции, но в то же время самостоятельный и независимый блок. Вместо контейнера с карточками товаров я могу поместить в табы другой контент -->
-          <div id="content-3" class="tabs-section__content-box product-cards-wrapper">
+          <div data-content='1' class="tabs-section__content-box product-cards-wrapper">
             <!-- сам контент в виде карточек -->
 
 
@@ -989,7 +993,7 @@
 
 
 
-            <div id="content-1" class="tabs-section__content tab-content">
+           <!--  <div id="content-1" class="tabs-section__content tab-content">
               <div class="tab-content">
                 <h1>Lern HTML!</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aut iusto dolorum ea dolorem?
@@ -1017,11 +1021,14 @@
                   ullam quam nostrum delectus, libero alias assumenda at repellendus praesentium velit tenetur dolorum
                   sapiente. Adipisci.</p>
               </div>
-            </div>
+            </div> -->
 
           </div>
 
-
+          <div class="tabs-section__content-box tabs-section__content-box_custom product-cards-wrapper">
+            Another content in new tab
+          </div>
+          
         </div>
       </div>
     </div>
@@ -1030,41 +1037,7 @@
   <script src="js/header-select.js"></script> <!-- search field -->
   <script src="js/slider/swiper.min.js"></script><!-- библиотека -->
   <script src="js/slider/slider.js"></script><!-- инициализация свайпера -->
-
-  <script>
-    let content1 = document.getElementById("content-1")
-    let content2 = document.getElementById("content-2")
-    let content3 = document.getElementById("content-3")
-
-    let bt1 = document.getElementById("btn-1")
-    let bt2 = document.getElementById("btn-2")
-    /*  let bt3=document.getElementById("btn-3") */
-    content1.style.transform = "translateX(-200%)"
-    content2.style.transform = "translateX(-200%)"
-    content3.style.transform = "translateX(-200%)"
-
-    function openHTML() {/* 
-      content1.style.transform = "translateX(0)" */
-      content2.style.transform = "translateX(-200%)"
-      content3.style.transform = "translateX(0)"
-      /*  content3.style.transform = "translateX(-200%)" */
-    }
-
-    function openCSS() {
-      content1.style.transform = "translateX(-200%)"
-      content2.style.transform = "translateX(0)"
-      content3.style.transform = "translateX(-200%)"
-      /* content3.style.transform = "translateX(-200%)" */
-    }
-
-    /*   function openJS() {
-        content1.style.transform = "translateX(-200%)"
-        content2.style.transform = "translateX(-200%)"
-        content3.style.transform = "translateX(0)"
-      }
-   */
-
-  </script>
+  <script src="js/tabs-contents/script.js"></script><!-- контент в табах -->
 </body>
 
 </html>
