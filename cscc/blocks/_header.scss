@@ -76,9 +76,21 @@
     align-content: center;
   }
   .header__logo {
-    margin: 15px 25px;
+    position: relative;
+    margin: 15px 25px 25px 15px;
+    &::after{
+      position: absolute;
+      content: "";
+      bottom: - 15px;
+      width: 120%;
+      height: 2px;
+      left: -10%;
+      background-color: #4D4D4D;
+      opacity: 0.5;
+    }
   }
 }
+
 
 .header__search-input-wrapper {
   display: flex;

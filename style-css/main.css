@@ -120,7 +120,18 @@ p {
     align-content: center;
   }
   .header__logo {
-    margin: 15px 25px;
+    position: relative;
+    margin: 15px 25px 25px 15px;
+  }
+  .header__logo::after {
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    width: 120%;
+    height: 2px;
+    left: -10%;
+    background-color: #4D4D4D;
+    opacity: 0.5;
   }
 }
 
@@ -438,6 +449,22 @@ p {
   }
   .header-nav__select-item {
     width: 44%;
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .header-nav__deals {
+    padding: 0;
+  }
+  .header-nav__link {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .header-nav__select-item {
+    width: 33%;
   }
 }
 
@@ -1536,6 +1563,21 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .main-content__column-left {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .main-content__column-right {
+    margin-top: 50px;
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+
 .main__navigation {
   width: 100%;
   margin-bottom: 30px;
@@ -1735,10 +1777,9 @@ button.swiper-pagination-bullet {
 
 .product-card {
   /* динамика карточек */
-  /*   max-width: 340px; */
   flex-basis: 220px;
   flex-grow: 1;
-  flex-shrink: 1;
+  flex-shrink: 2;
   padding: 20px;
   margin-bottom: 24px;
   margin-left: 24px;

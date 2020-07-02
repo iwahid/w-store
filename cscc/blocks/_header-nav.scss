@@ -101,6 +101,22 @@ $border: 2px solid #f5f5f5;
     width: 44%;
   }
 }
-@media screen and (max-width: 550px) {
+
+@media screen and (max-width: 406px) {
+
+  .header-nav__deals {
+    padding: 0;
+  }
+  .header-nav__link {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+  .header-nav__select-item {
+    width: 33%;
+  }
  
 }
