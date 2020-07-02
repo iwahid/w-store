@@ -1549,7 +1549,8 @@ button.swiper-pagination-bullet {
   align-items: center;
   height: 58px;
   width: 100%;
-  border-bottom: 2px solid #f5f5f5;
+  border-top: 2px solid #f5f5f5;
+  border-bottom: 2px solid transparent;
   background-color: #fff;
   padding: 0 20px 0 17px;
   cursor: pointer;
@@ -1609,6 +1610,10 @@ button.swiper-pagination-bullet {
 .navigation-item:last-child {
   border-bottom: 1px solid transparent;
   border-radius: 0 0 6px 6px;
+}
+
+.navigation-item_selected {
+  border-bottom: 2px solid #1875f0;
 }
 
 .banner {
@@ -1733,7 +1738,6 @@ button.swiper-pagination-bullet {
   flex-basis: 220px;
   flex-grow: 1;
   flex-shrink: 2;
-  height: 440px;
   padding: 20px;
   margin-bottom: 24px;
   margin-left: 24px;
@@ -1821,11 +1825,11 @@ button.swiper-pagination-bullet {
   font-weight: 500;
   line-height: 20px;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .product-card__rating {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .product-card__footer {
@@ -1852,4 +1856,122 @@ button.swiper-pagination-bullet {
 .rating {
   display: flex;
   justify-content: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  /* стили для анимации star-rating. Именно для интерактивности рейтинга. Компромиссынй вариант, при котором не требуется тянуть отдельный плагин */
+}
+
+.rating__stars {
+  display: inline-flex;
+  margin-right: 10px;
+}
+
+.rating__stars:hover .rating__item {
+  color: orange;
+}
+
+.rating__item {
+  color: #dcdcdc;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  transition: 0.2s;
+}
+
+.rating__item:hover {
+  color: orange;
+}
+
+.rating__item:hover ~ .rating__item {
+  color: #dcdcdc;
+}
+
+.rating__counter {
+  text-align: center;
+  vertical-align: center;
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.12px;
+}
+
+.rating[data-total-value="1"] .rating__item:nth-child(1) {
+  color: orange;
+}
+
+.rating[data-total-value="2"] .rating__item:nth-child(1) {
+  color: orange;
+}
+
+.rating[data-total-value="2"] .rating__item:nth-child(2) {
+  color: orange;
+}
+
+.rating[data-total-value="3"] .rating__item:nth-child(1) {
+  color: orange;
+}
+
+.rating[data-total-value="3"] .rating__item:nth-child(2) {
+  color: orange;
+}
+
+.rating[data-total-value="3"] .rating__item:nth-child(3) {
+  color: orange;
+}
+
+.rating[data-total-value="4"] .rating__item:nth-child(1) {
+  color: orange;
+}
+
+.rating[data-total-value="4"] .rating__item:nth-child(2) {
+  color: orange;
+}
+
+.rating[data-total-value="4"] .rating__item:nth-child(3) {
+  color: orange;
+}
+
+.rating[data-total-value="4"] .rating__item:nth-child(4) {
+  color: orange;
+}
+
+.rating[data-total-value="5"] .rating__item:nth-child(1) {
+  color: orange;
+}
+
+.rating[data-total-value="5"] .rating__item:nth-child(2) {
+  color: orange;
+}
+
+.rating[data-total-value="5"] .rating__item:nth-child(3) {
+  color: orange;
+}
+
+.rating[data-total-value="5"] .rating__item:nth-child(4) {
+  color: orange;
+}
+
+.rating[data-total-value="5"] .rating__item:nth-child(5) {
+  color: orange;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.hover-shadow {
+  transition: 0.2s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: .2s;
 }

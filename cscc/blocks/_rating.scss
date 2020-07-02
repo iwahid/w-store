@@ -1,0 +1,96 @@
+.rating {
+  display: flex;
+  align-items: center;
+
+  &__stars {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+  &__stars:hover {
+    .rating__item {
+      color: orange;
+    }
+  }
+  &__item {
+    color: #dcdcdc;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+    transition: 0.2s;
+  }
+  &__item:hover {
+    color: orange;
+  }
+  &__item:hover ~ .rating__item {
+    color: #dcdcdc;
+  }
+  &__counter {
+    text-align: center;
+    vertical-align: center;
+
+    color: #b3b3b3;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.12px;
+  }
+
+  /* стили для анимации star-rating. Именно для интерактивности рейтинга. Компромиссынй вариант, при котором не требуется тянуть отдельный плагин */
+  &[data-total-value="1"] .rating__item:nth-child(1) {
+    color: orange;
+  }
+
+  &[data-total-value="2"] .rating__item:nth-child(1) {
+    color: orange;
+  }
+  &[data-total-value="2"] .rating__item:nth-child(2) {
+    color: orange;
+  }
+
+  &[data-total-value="3"] .rating__item:nth-child(1) {
+    color: orange;
+  }
+  &[data-total-value="3"] .rating__item:nth-child(2) {
+    color: orange;
+  }
+  &[data-total-value="3"] .rating__item:nth-child(3) {
+    color: orange;
+  }
+
+  &[data-total-value="4"] .rating__item:nth-child(1) {
+    color: orange;
+  }
+  &[data-total-value="4"] .rating__item:nth-child(2) {
+    color: orange;
+  }
+  &[data-total-value="4"] .rating__item:nth-child(3) {
+    color: orange;
+  }
+  &[data-total-value="4"] .rating__item:nth-child(4) {
+    color: orange;
+  }
+
+  &[data-total-value="5"] .rating__item:nth-child(1) {
+    color: orange;
+  }
+  &[data-total-value="5"] .rating__item:nth-child(2) {
+    color: orange;
+  }
+  &[data-total-value="5"] .rating__item:nth-child(3) {
+    color: orange;
+  }
+  &[data-total-value="5"] .rating__item:nth-child(4) {
+    color: orange;
+  }
+  &[data-total-value="5"] .rating__item:nth-child(5) {
+    color: orange;
+  }
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
