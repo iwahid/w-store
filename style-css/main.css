@@ -1735,9 +1735,10 @@ button.swiper-pagination-bullet {
 
 .product-card {
   /* динамика карточек */
+  /*   max-width: 340px; */
   flex-basis: 220px;
   flex-grow: 1;
-  flex-shrink: 2;
+  flex-shrink: 1;
   padding: 20px;
   margin-bottom: 24px;
   margin-left: 24px;
@@ -1968,6 +1969,7 @@ button.swiper-pagination-bullet {
 }
 
 .hover-shadow {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   transition: 0.2s;
 }
 
