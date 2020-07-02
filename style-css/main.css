@@ -1424,7 +1424,7 @@ button.swiper-pagination-bullet {
 }
 
 .promo-section__item-2 {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), url("./../../../img/promo/watch-bg.png");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), url("./../img/promo/watch-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
