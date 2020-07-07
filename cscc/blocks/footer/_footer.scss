@@ -1,0 +1,142 @@
+.footer {
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  &__top {
+    padding: 35px 0;
+    border-bottom: 2px solid #f5f5f5;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 10px;
+  }
+  &__logo {
+    color: #4d4d4d;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.76px;
+    min-width: 110px;
+    margin: 10px 15px;
+  }
+  &__navigation {
+    width: 300px;
+    margin: 10px 20px;
+  }
+  &__bottom {
+    padding: 35px 0;
+  }
+  &__copyrights {
+    margin: 10px 15px;
+  }
+  &__payment {
+    margin: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    display: inline-block;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    transition: 0.2s ease-in;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+  }
+}
+
+.social-links {
+  display: flex;
+  margin: 10px;
+  transition: 0.2s ease-in;
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    & a {
+      display: block;
+      width: 26px;
+      height: 26px;
+      padding: 5px;
+      color: #666666;
+      text-align: center;
+    }
+    & a svg {
+      line-height: 30px;
+      fill: #666;
+      transition: $filter-shadow-animation;
+    }
+    & a:hover svg {
+      fill: $blue;
+      filter: drop-shadow(0px 0px 5px $blue);
+      /* transition: $icon-animation; */
+    }
+  }
+}
+
+.copyrights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__item {
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-right: 25px;
+  }
+}
+.payment-section {
+  display: flex;
+  justify-content: center;
+  & p {
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+
+    margin-right: 20px;
+  }
+  & img:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .footer {
+    &__top {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    &__wrapper {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+
+    &__bottom {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    &__copyrights {
+    }
+    &__payment {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

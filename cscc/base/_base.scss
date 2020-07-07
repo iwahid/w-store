@@ -41,3 +41,35 @@ p {
   font-size: inherit;
   line-height: 1;
 }
+
+.link-animation {
+  &:before {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background: $blue;
+    transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+    left: 50%;
+    bottom: 0;
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: $blue;
+    transition: width 0.2s ease-in-out;
+    left: 50%;
+    bottom: 0;
+  }
+  &:hover:before {
+    width: 50%;
+    left: 0;
+  }
+  &:hover:after {
+    width: 50%;
+  }
+}

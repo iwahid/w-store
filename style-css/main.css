@@ -43,6 +43,39 @@ p {
   line-height: 1;
 }
 
+.link-animation:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #1875f0;
+  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+  left: 50%;
+  bottom: 0;
+}
+
+.link-animation:after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #1875f0;
+  transition: width 0.2s ease-in-out;
+  left: 50%;
+  bottom: 0;
+}
+
+.link-animation:hover:before {
+  width: 50%;
+  left: 0;
+}
+
+.link-animation:hover:after {
+  width: 50%;
+}
+
 .header {
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -1544,11 +1577,6 @@ button.swiper-pagination-bullet {
   }
 }
 
-.main__content {
-  /*  background-color: #aaa; */
-  margin-bottom: 30px;
-}
-
 .main-content {
   display: flex;
 }
@@ -1896,11 +1924,7 @@ button.swiper-pagination-bullet {
 }
 
 .rating {
-  display: flex;
   justify-content: center;
-}
-
-.rating {
   display: flex;
   align-items: center;
   /* стили для анимации star-rating. Именно для интерактивности рейтинга. Компромиссынй вариант, при котором не требуется тянуть отдельный плагин */
@@ -2007,6 +2031,159 @@ button.swiper-pagination-bullet {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.footer {
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.footer__top {
+  padding: 35px 0;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 950px;
+  padding: 10px;
+}
+
+.footer__logo {
+  color: #4d4d4d;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.76px;
+  min-width: 110px;
+  margin: 10px 15px;
+}
+
+.footer__navigation {
+  width: 300px;
+  margin: 10px 20px;
+}
+
+.footer__bottom {
+  padding: 35px 0;
+}
+
+.footer__copyrights {
+  margin: 10px 15px;
+}
+
+.footer__payment {
+  margin: 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-navigation__item {
+  display: inline-block;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  transition: 0.2s ease-in;
+  position: relative;
+}
+
+.footer-navigation__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.social-links {
+  display: flex;
+  margin: 10px;
+  transition: 0.2s ease-in;
+}
+
+.social-links__item {
+  display: inline-block;
+}
+
+.social-links__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.social-links__item a {
+  display: block;
+  width: 26px;
+  height: 26px;
+  padding: 5px;
+  color: #666666;
+  text-align: center;
+}
+
+.social-links__item a svg {
+  line-height: 30px;
+  fill: #666;
+  transition: 0.2s filter ease-in;
+}
+
+.social-links__item a:hover svg {
+  fill: #1875f0;
+  filter: drop-shadow(0px 0px 5px #1875f0);
+  /* transition: $icon-animation; */
+}
+
+.copyrights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.copyrights__item {
+  color: #b8b8b8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-right: 25px;
+}
+
+.payment-section {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-section p {
+  color: #b8b8b8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-right: 20px;
+}
+
+.payment-section img:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 680px) {
+  .footer__top {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .footer__bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .footer__payment {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .hover-shadow {

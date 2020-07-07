@@ -78,10 +78,6 @@
   &__comparison-list {
     margin-right: 15px;
   }
-  &__favorites {
-  }
-  &__body {
-  }
   &__product-image {
     height: 160px;
     text-align: center;
@@ -103,10 +99,6 @@
   &__rating {
     margin-bottom: 20px;
   }
-  &__star {
-  }
-  &__counter {
-  }
   &__footer {
     display: flex;
     justify-content: center;
@@ -121,8 +113,6 @@
     letter-spacing: 0.16px;
     margin-right: 18px;
   }
-  &__shopping-cart {
-  }
 }
 
 .tabs-section__content-box_custom {
@@ -130,7 +120,3 @@
   justify-content: center;
 }
 
-.rating {
-  display: flex;
-  justify-content: center;
-}
