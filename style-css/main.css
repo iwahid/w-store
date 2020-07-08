@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/* для всех ссылок */
+/* анимация перекрашивания иконок */
+/* анимация перекрашивания текста */
+/* для sidebar menu */
+/* анимация для пунктов side-bar menu. Реализовано отдельно, поскольку не является ссылками */
+/* тоже анимация, для svg иконок пунктов sidebar menu */
+/* рамки у элементов sidebar menu */
+/* для внутренних элементво сайта (кнопок) */
+/* анимация для svg элементов, являющихся кнопками или другими эл. управления */
+/* общий стиль теней для всех объектов на сайте */
 * {
   box-sizing: border-box;
   user-select: none;
@@ -21,15 +31,6 @@ body {
   display: none;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #1875f0;
-}
-
 h1,
 h2,
 h3,
@@ -41,6 +42,34 @@ p {
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1;
+}
+
+a {
+  color: #808080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  /* color: $blue; */
+}
+
+/* класс для добавления анимации элементам управления */
+.link-animation {
+  /* анимация самой ссылки. Того, что в ней находится */
+  transition: 0.2s color ease-in;
+  /* анимация внутреннего текста */
+  /* подчёркивания */
+  /* подчёркивания при наведении */
+  /* анимация для внутренних иконок */
+  /* анимация для внутреннего текста, если он задан отдельным спаном */
+  /* анимация для внутренних иконок при наведении */
+  /* анимация для внутреннего текста, если он задан отдельным спаном, при наведении*/
+}
+
+.link-animation:hover {
+  color: #1875f0;
+  transition: 0.2s color ease-in;
 }
 
 .link-animation:before {
@@ -74,6 +103,22 @@ p {
 
 .link-animation:hover:after {
   width: 50%;
+}
+
+.link-animation svg {
+  transition: 0.2s fill ease-in;
+}
+
+.link-animation span {
+  transition: 0.2s color ease-in;
+}
+
+.link-animation:hover svg {
+  fill: #1875f0;
+}
+
+.link-animation:hover span {
+  color: #1875f0;
 }
 
 .header {
@@ -339,23 +384,21 @@ p {
   /*  width: 120px; */
   position: relative;
   color: #808080;
-}
+  /* &:hover {
+    color: $blue;
 
-.header-link:hover {
-  color: #1875f0;
-}
-
-.header-link:hover .icon-svg {
-  fill: #1875f0;
-}
-
-.header-link:hover::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  width: 90%;
-  height: 2px;
-  background-color: #1875f0;
+    .icon-svg {
+      fill: $blue;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 90%;
+      height: 2px;
+      background-color: $blue;
+    }
+  } */
 }
 
 .icon-svg {
@@ -432,20 +475,18 @@ p {
   padding: 0 15px;
   text-align: center;
   line-height: 1.5;
-}
-
-.header-nav__link:hover {
-  color: #1875f0;
-}
-
-.header-nav__link:hover::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: blue;
+  /* &:hover {
+    color: $blue;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: blue;
+    }
+  } */
 }
 
 .header-nav__select {
@@ -502,8 +543,6 @@ p {
 }
 
 .header-mega-menu-link {
-  /* 
-  padding: 0 40px 0 30px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,24 +550,28 @@ p {
   height: 100%;
   text-decoration: none;
   position: relative;
-}
+  /*  & svg {
+    transition: all 1s;
+  }
+  &:hover {
+    svg {
+      fill: $blue;
+    }
+ */
+  /*  .header-mega-menu-link__text {
+      color: $blue;
+    }
 
-.header-mega-menu-link:hover svg {
-  fill: #1875f0;
-}
-
-.header-mega-menu-link:hover .header-mega-menu-link__text {
-  color: #1875f0;
-}
-
-.header-mega-menu-link:hover::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: blue;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: blue;
+    } */
+  /*  } */
 }
 
 .header-mega-menu-link__icon {
@@ -543,10 +586,6 @@ p {
   color: #808080;
   font-size: 14px;
   font-weight: 500;
-}
-
-.header-mega-menu-link__text:hover {
-  color: #1875f0;
 }
 
 .nav-dropdown {
@@ -1747,16 +1786,17 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   line-height: 0px;
   /* выравнивание текста в кнопке */
-}
-
-.tabs-section__btn:hover::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0px;
-  width: 100%;
-  height: 2px;
-  background-color: #1875f0;
+  /*   &:hover {
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background-color: $blue;
+      }
+    } */
 }
 
 .tabs-section__btn:focus {
@@ -1814,14 +1854,21 @@ button.swiper-pagination-bullet {
   border-radius: 6px;
   background-color: #ffffff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: 0.2s all ease-in;
+  transition: 0.2s box-shadow ease-in;
   cursor: default;
+  /* display: none;
+  &:nth-child(1n+1) {
+    transition: 3.5s all ease-in-out;
+    display: block;
+    color: red;
+    
+  } */
   /* иконки. Для всего проекта, целесообразно вынести их в общий набор стилей */
 }
 
 .product-card:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  transition: 0.2s all ease-in;
+  /* transition: $shadow-animation; */
 }
 
 .product-card__header {
@@ -2092,7 +2139,6 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
-  transition: 0.2s ease-in;
   position: relative;
 }
 
@@ -2108,6 +2154,11 @@ button.swiper-pagination-bullet {
 
 .social-links__item {
   display: inline-block;
+  /* & a svg {
+      line-height: 30px;
+      fill: #666;
+      transition: $filter-shadow-animation;
+    } */
 }
 
 .social-links__item:not(:last-child) {
@@ -2121,18 +2172,6 @@ button.swiper-pagination-bullet {
   padding: 5px;
   color: #666666;
   text-align: center;
-}
-
-.social-links__item a svg {
-  line-height: 30px;
-  fill: #666;
-  transition: 0.2s filter ease-in;
-}
-
-.social-links__item a:hover svg {
-  fill: #1875f0;
-  filter: drop-shadow(0px 0px 5px #1875f0);
-  /* transition: $icon-animation; */
 }
 
 .copyrights {
