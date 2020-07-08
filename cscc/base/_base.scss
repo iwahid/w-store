@@ -21,14 +21,6 @@ body {
   display: none; // для скрывания объектов через js
 }
 
-a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    color: $blue;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -42,7 +34,25 @@ p {
   line-height: 1;
 }
 
+a {
+  color: #808080;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    /* color: $blue; */
+  }
+}
+
+/* класс для добавления анимации элементам управления */
 .link-animation {
+  /* анимация самой ссылки. Того, что в ней находится */
+  transition: $text-color-animation;
+  /* анимация внутреннего текста */
+  &:hover{
+    color: $blue;
+    transition: $text-color-animation;
+  }
+  /* подчёркивания */
   &:before {
     display: block;
     position: absolute;
@@ -65,11 +75,31 @@ p {
     left: 50%;
     bottom: 0;
   }
+ 
+  /* подчёркивания при наведении */
   &:hover:before {
     width: 50%;
     left: 0;
   }
   &:hover:after {
     width: 50%;
+  }
+  /* анимация для внутренних иконок */
+  & svg {
+    transition: $icon-fill-animation;
+  }
+  /* анимация для внутреннего текста, если он задан отдельным спаном */
+  & span{
+    transition: $text-color-animation;
+  }
+  /* анимация для внутренних иконок при наведении */
+  &:hover {
+    svg {
+      fill: $blue;
+    }
+  }
+  /* анимация для внутреннего текста, если он задан отдельным спаном, при наведении*/
+  &:hover span{
+    color: $blue;
   }
 }

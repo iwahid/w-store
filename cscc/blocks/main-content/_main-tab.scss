@@ -27,7 +27,7 @@
     font-weight: 700;
     line-height: 0px; /* выравнивание текста в кнопке */
 
-    &:hover {
+  /*   &:hover {
       &::after {
         position: absolute;
         content: "";
@@ -37,7 +37,7 @@
         height: 2px;
         background-color: $blue;
       }
-    }
+    } */
     &:focus {
       outline: none;
     }

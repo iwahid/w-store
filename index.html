@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="style-css/main.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- <style>
+    a {
+  color: #808080;
+  text-decoration: none;}
+
+  </style> -->
 </head>
 
 <body>
@@ -58,7 +64,7 @@
       <!-- пользовательские элементы -->
       <!-- При работе с svg - не забывать о том, что нужно удалять дефолтную заливку -->
       <div class="header__links">
-        <a href="#" class="header-link header-link_notify">
+        <a href="#" class="header-link link-animation header-link_notify">
           <span class="header-link__icon"> <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="21"
               height="20" viewBox="0 0 21 20">
               <g>
@@ -68,7 +74,7 @@
             </svg> </span>
           <span class="header-link__text">2 Items</span>
         </a>
-        <a href="#" class="header-link">
+        <a href="#" class="header-link link-animation">
           <span class="header-link__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" class="icon-svg">
               <g>
@@ -79,7 +85,7 @@
           </span>
           <span class="header-link__text">Wish List</span>
         </a>
-        <a href="#" class="header-link ">
+        <a href="#" class="header-link link-animation">
           <span class="header-link__icon">
             <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
               <g>
@@ -100,7 +106,7 @@
       <div class="header-nav">
         <!-- а это - отдельный, независимый блок -->
         <div class="header-nav__categories">
-          <a href="#" class="header-mega-menu-link">
+          <a href="#" class="header-mega-menu-link link-animation">
             <span class="header-mega-menu-link__icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12">
                 <path d="M18 0v2H0V0zM0 5h18v2H0zm0 5h18v2H0z" /></svg>
@@ -109,10 +115,10 @@
           </a>
         </div>
         <div class="header-nav__deals">
-          <a href="#" class="header-nav__link">Super Deals</a>
-          <a href="#" class="header-nav__link">Featured Brands</a>
-          <a href="#" class="header-nav__link">Collections</a>
-          <a href="#" class="header-nav__link">Bestselling</a>
+          <a href="#" class="header-nav__link link-animation">Super Deals</a>
+          <a href="#" class="header-nav__link link-animation">Featured Brands</a>
+          <a href="#" class="header-nav__link link-animation">Collections</a>
+          <a href="#" class="header-nav__link link-animation">Bestselling</a>
         </div>
 
         <!-- header-nav__select -->
@@ -281,7 +287,7 @@
                     d="M20 14H2V2h18zm0-14H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h7v2H7v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
                 </svg>
               </div>
-              <div class="navigation-item__title">Computers</div>
+              <div class="navigation-item__title ">Computers</div>
               <div class="navigation-item__arrow-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10">
                   <path d="M6.001 5.002L3.001 0H.124l3.02 5.002L-.002 10H3z" />
@@ -449,8 +455,8 @@
         <div class="main-content__column-right">
 
           <div class="tabs-section__btn-box">
-            <button class="tabs-section__btn tabs-section__btn_active">Most Popular</button>
-            <button class="tabs-section__btn">My communities</button>
+            <button class="tabs-section__btn link-animation tabs-section__btn_active">Most Popular</button>
+            <button class="tabs-section__btn link-animation">My communities</button>
           </div>
 
           <!-- это элемент секции, но в то же время самостоятельный и независимый блок. Вместо контейнера с карточками товаров я могу поместить в табы другой контент -->
@@ -955,25 +961,25 @@
         </nav>
 
         <ul class="footer__social-buttons-list social-links">
-          <li class="social-links__item social-links__item_facebook"><a href="#">
+          <li class="social-links__item social-links__item_facebook"><a href="#" class="link-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="15" viewBox="0 0 8 15">
                 <path
                   d="M5.188 14.994V8.156h2.354l.355-2.665H5.188v-1.7c0-.773.22-1.298 1.355-1.298l1.448-.001V.109A19.775 19.775 0 0 0 5.882.004c-2.09 0-3.519 1.242-3.519 3.522v1.965H0v2.665h2.363v6.838z" />
               </svg>
             </a></li>
-          <li class="social-links__item social-links__item_twitter"><a href="#">
+          <li class="social-links__item social-links__item_twitter"><a href="#" class="link-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12">
                 <path
                   d="M14 1.533A5.57 5.57 0 0 1 12.353 2 2.96 2.96 0 0 0 13.616.358c-.563.345-1.18.59-1.824.72A2.826 2.826 0 0 0 9.69.144c-.767.005-1.5.32-2.038.877a2.982 2.982 0 0 0-.834 2.09c0 .229.027.455.076.678A8.065 8.065 0 0 1 .974.686c-.763 1.356-.376 3.08.888 3.963a2.79 2.79 0 0 1-1.301-.371v.037c-.006 1.406.957 2.622 2.305 2.91a2.79 2.79 0 0 1-1.296.052 2.89 2.89 0 0 0 2.683 2.061 5.649 5.649 0 0 1-3.567 1.27.896.896 0 0 1-.686-.04 7.933 7.933 0 0 0 4.4 1.335 8.093 8.093 0 0 0 5.817-2.48 8.42 8.42 0 0 0 2.356-5.965c0-.129 0-.257-.008-.384A5.927 5.927 0 0 0 14 1.533z" />
               </svg>
             </a></li>
-          <li class="social-links__item social-links__item_instagram"><a href="#">
+          <li class="social-links__item social-links__item_instagram"><a href="#" class="link-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <path
                   d="M11.015 2H4.93c-.885 0-1.659.276-2.156.774C2.276 3.272 2 4.046 2 4.931v6.082c0 .885.276 1.66.83 2.213.553.497 1.272.774 2.154.774h6.03c.885 0 1.66-.277 2.156-.774.554-.498.83-1.272.83-2.157V4.986c0-.885-.276-1.603-.774-2.157C12.673 2.276 11.954 2 11.015 2zm4.984 9.308c0 1.384-.482 2.587-1.327 3.429-.845.842-2.054 1.263-3.382 1.263H4.71c-1.328 0-2.538-.421-3.383-1.263C.422 13.895 0 12.692 0 11.308V4.692C0 1.925 1.872 0 4.71 0h6.641c1.389 0 2.535.481 3.38 1.323.847.842 1.268 1.986 1.268 3.369zM8 10a2 2 0 1 0 .002-4A2 2 0 0 0 8 10zm-.028 2C5.753 12 4 10.177 4 8 4 5.765 5.812 4 7.97 4c2.16 0 4.03 1.765 4.03 4 0 2.235-1.811 4-4.03 4zm4.03-7C11.436 5 11 4.563 11 4c0-.562.436-1 1-1 .564 0 1 .438 1 1 0 .563-.436 1-1 1z" />
               </svg>
             </a></li>
-          <li class="social-links__item social-links__item_youtube"><a href="#">
+          <li class="social-links__item social-links__item_youtube"><a href="#" class="link-animation">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
                 <path d="M6 9.26V2.73L12 6zM16 2c0-1.1-.9-2-2-2H2C.9 0 0 .9 0 2v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2z" />
               </svg>

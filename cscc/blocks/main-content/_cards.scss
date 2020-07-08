@@ -21,9 +21,17 @@
   transition: $shadow-animation;
   cursor: default;
 
+  /* display: none;
+  &:nth-child(1n+1) {
+    transition: 3.5s all ease-in-out;
+    display: block;
+    color: red;
+    
+  } */
+
   &:hover {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-    transition: $shadow-animation;
+    /* transition: $shadow-animation; */
   }
 
   &__header {
@@ -113,6 +121,7 @@
     letter-spacing: 0.16px;
     margin-right: 18px;
   }
+  
 }
 
 .tabs-section__content-box_custom {
