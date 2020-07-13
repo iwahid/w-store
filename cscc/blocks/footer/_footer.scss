@@ -12,16 +12,6 @@
     max-width: 950px;
     padding: 10px;
   }
-  &__logo {
-    color: #4d4d4d;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.76px;
-    min-width: 110px;
-    margin: 10px 15px;
-  }
   &__navigation {
     width: 300px;
     margin: 10px 20px;
@@ -52,61 +42,7 @@
     &:not(:last-child) {
       margin-right: 25px;
     }
-
-  }
-}
-
-.social-links {
-  display: flex;
-  margin: 10px;
-  transition: 0.2s ease-in;
-  &__item {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 25px;
-    }
-    & a {
-      display: block;
-      width: 26px;
-      height: 26px;
-      padding: 5px;
-      color: #666666;
-      text-align: center;
-    }
-    /* & a svg {
-      line-height: 30px;
-      fill: #666;
-      transition: $filter-shadow-animation;
-    } */
-  }
-}
-
-.copyrights {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  &__item {
-    color: #b8b8b8;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 30px;
-    margin-right: 25px;
-  }
-}
-.payment-section {
-  display: flex;
-  justify-content: center;
-  & p {
-    color: #b8b8b8;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 30px;
-
-    margin-right: 20px;
-  }
-  & img:not(:last-child) {
-    margin-right: 20px;
+    
   }
 }
 
@@ -134,3 +70,5 @@
     }
   }
 }
+
+

@@ -1,0 +1,18 @@
+.payment-section {
+  display: flex;
+  justify-content: center;
+  & p {
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+
+    margin-right: 20px;
+  }
+  & li {
+    display: inline;
+  }
+  & img:not(:last-child) {
+    margin-right: 20px;
+  }
+}

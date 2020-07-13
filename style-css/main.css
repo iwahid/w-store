@@ -145,17 +145,6 @@ a:hover {
   }
 }
 
-.header__logo {
-  color: #4d4d4d;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 1.76px;
-  margin: 0 25px;
-  order: 0;
-}
-
 .header__search {
   height: 50px;
   border-radius: 4px;
@@ -1645,7 +1634,7 @@ button.swiper-pagination-bullet {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.navigation-item {
+.main-navigation__item {
   display: flex;
   align-content: center;
   align-items: center;
@@ -1656,10 +1645,11 @@ button.swiper-pagination-bullet {
   background-color: #fff;
   padding: 0 20px 0 17px;
   cursor: pointer;
-  transition: 0.2s border ease-in;
+  transition: 0.2s border ease-in, 0.2s box-shadow ease-in;
+  /* стили при наведении и активном состоянии */
 }
 
-.navigation-item__icon {
+.main-navigation__item-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1670,7 +1660,7 @@ button.swiper-pagination-bullet {
   fill: #b5b5b5;
 }
 
-.navigation-item__title {
+.main-navigation__item-title {
   color: #808080;
   font-size: 13px;
   font-weight: 500;
@@ -1678,44 +1668,82 @@ button.swiper-pagination-bullet {
   transition: 0.2s ease-in;
 }
 
-.navigation-item__arrow-icon {
+.main-navigation__item-arrow-icon {
   margin-left: auto;
   transition: 0.2s fill ease-in;
   fill: #b5b5b5;
+  /* лютый костылью Анимарование поворота стрелочки */
 }
 
-.navigation-item:hover {
-  border-bottom: 2px solid #1875f0;
-  transition: 0.2s border ease-in;
+.main-navigation__item-arrow-icon svg {
+  transition: .2s transform ease-in-out;
 }
 
-.navigation-item:hover .navigation-item__icon {
-  fill: #1875f0;
-  transition: 0.2s fill ease-in;
-}
-
-.navigation-item:hover .navigation-item__title {
-  color: #1875f0;
-  transition: 0.2s ease-in;
-}
-
-.navigation-item:hover .navigation-item__arrow-icon {
-  fill: #1875f0;
-  transition: 0.2s fill ease-in;
-}
-
-.navigation-item:first-child {
+.main-navigation__item:first-child {
   border-top: 1px solid transparent;
   border-radius: 6px 6px 0px 0px;
 }
 
-.navigation-item:last-child {
+.main-navigation__item:last-child {
   border-bottom: 1px solid transparent;
   border-radius: 0 0 6px 6px;
 }
 
-.navigation-item_selected {
+.main-navigation__item:hover {
   border-bottom: 2px solid #1875f0;
+}
+
+.main-navigation__item:hover .main-navigation__item-icon {
+  fill: #1875f0;
+  transition: 0.2s fill ease-in;
+}
+
+.main-navigation__item:hover .main-navigation__item-title {
+  color: #1875f0;
+  transition: 0.2s ease-in;
+}
+
+.main-navigation__item:hover .main-navigation__item-arrow-icon {
+  fill: #1875f0;
+  transition: 0.2s fill ease-in;
+}
+
+.main-navigation__item_selected {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #1875f0;
+}
+
+.main-navigation__item_selected .main-navigation__item-icon {
+  fill: #1875f0;
+  transition: 0.2s fill ease-in;
+}
+
+.main-navigation__item_selected .main-navigation__item-title {
+  color: #1875f0;
+  transition: 0.2s ease-in;
+}
+
+.main-navigation__item_selected .main-navigation__item-arrow-icon {
+  fill: #1875f0;
+  transition: 0.2s fill ease-in;
+}
+
+/* раздвижная панель настроек в sidebar */
+.menu-panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.menu-panel__content {
+  padding: 20px 15px;
+}
+
+/* лютый костылью Анимарование поворота стрелочки */
+.adapt {
+  transform: rotate(90deg);
+  transition: .2s transform ease-in-out;
 }
 
 .banner {
@@ -2065,14 +2093,6 @@ button.swiper-pagination-bullet {
   color: orange;
 }
 
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
 .footer {
   background-color: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -2089,17 +2109,6 @@ button.swiper-pagination-bullet {
   margin: 0 auto;
   max-width: 950px;
   padding: 10px;
-}
-
-.footer__logo {
-  color: #4d4d4d;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1.76px;
-  min-width: 110px;
-  margin: 10px 15px;
 }
 
 .footer__navigation {
@@ -2139,6 +2148,37 @@ button.swiper-pagination-bullet {
   margin-right: 25px;
 }
 
+@media screen and (max-width: 680px) {
+  .footer__top {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .footer__bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .footer__payment {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  color: #4d4d4d;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1.76px;
+  margin: auto 25px;
+  order: 0;
+}
+
 .social-links {
   display: flex;
   margin: 10px;
@@ -2147,11 +2187,6 @@ button.swiper-pagination-bullet {
 
 .social-links__item {
   display: inline-block;
-  /* & a svg {
-      line-height: 30px;
-      fill: #666;
-      transition: $filter-shadow-animation;
-    } */
 }
 
 .social-links__item:not(:last-child) {
@@ -2165,6 +2200,19 @@ button.swiper-pagination-bullet {
   padding: 5px;
   color: #666666;
   text-align: center;
+}
+
+.social-links__item a svg {
+  width: 16px;
+  height: 16px;
+  line-height: 30px;
+  fill: #666;
+  transition: 0.2s all ease-in;
+}
+
+.social-links__item:hover a svg {
+  filter: drop-shadow(0px 0px 5px #1875f0);
+  fill: #1875f0;
 }
 
 .copyrights {
@@ -2194,28 +2242,12 @@ button.swiper-pagination-bullet {
   margin-right: 20px;
 }
 
-.payment-section img:not(:last-child) {
-  margin-right: 20px;
+.payment-section li {
+  display: inline;
 }
 
-@media screen and (max-width: 680px) {
-  .footer__top {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .footer__wrapper {
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
-  .footer__bottom {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  .footer__payment {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.payment-section img:not(:last-child) {
+  margin-right: 20px;
 }
 
 .hover-shadow {

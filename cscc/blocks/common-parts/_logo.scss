@@ -1,0 +1,10 @@
+.logo {
+  color: #4d4d4d;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1; //1.36 - множитель междустрочного интервала. В однострочных надо убирать
+  text-transform: uppercase;
+  letter-spacing: 1.76px; //1.36 - множитель мебуквенного интервала.
+  margin: auto 25px;
+  order: 0;
+}

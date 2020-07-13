@@ -5,10 +5,7 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.main__navigation-item {
-}
-
-.navigation-item {
+.main-navigation__item {
   display: flex;
   align-content: center;
   align-items: center;
@@ -19,8 +16,9 @@
   background-color: #fff;
   padding: 0 20px 0 17px;
   cursor: pointer;
-  transition: $border-animation;
-  &__icon {
+  transition: $border-animation, $shadow-animation;
+  
+  &-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +28,7 @@
     transition: $fill-animation;
     fill: $icon-fill;
   }
-  &__title {
+  &-title {
     color: #808080;
     font-size: 13px;
     font-weight: 500;
@@ -38,28 +36,16 @@
 
     transition: $text-animation;
   }
-  &__arrow-icon {
+  &-arrow-icon {
     margin-left: auto;
     transition: $fill-animation;
     fill: $icon-fill;
+    /* лютый костылью Анимарование поворота стрелочки */
+    & svg{
+      transition: .2s transform ease-in-out;
+    }
   }
-  &:hover {
-    border-bottom: 2px solid $blue;
-    transition: $border-animation;
 
-    .navigation-item__icon {
-      fill: $blue;
-      transition: $fill-animation;
-    }
-    .navigation-item__title {
-      color: $blue;
-      transition: $text-animation;
-    }
-    .navigation-item__arrow-icon {
-      fill: $blue;
-      transition: $fill-animation;
-    }
-  }
   &:first-child {
     border-top: 1px solid transparent;
     border-radius: 6px 6px 0px 0px;
@@ -69,8 +55,58 @@
     border-radius: 0 0 6px 6px;
   }
 
-  &_selected {
+  /* стили при наведении и активном состоянии */
+  &:hover {
     border-bottom: 2px solid $blue;
+
+    .main-navigation__item-icon {
+      fill: $blue;
+      transition: $fill-animation;
+    }
+    .main-navigation__item-title {
+      color: $blue;
+      transition: $text-animation;
+    }
+    .main-navigation__item-arrow-icon {
+      fill: $blue;
+      transition: $fill-animation;
+    }
+  }
+  
+
+  &_selected {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid $blue;
+    .main-navigation__item-icon {
+      fill: $blue;
+      transition: $fill-animation;
+    }
+    .main-navigation__item-title {
+      color: $blue;
+      transition: $text-animation;
+    }
+    .main-navigation__item-arrow-icon {
+      fill: $blue;
+      transition: $fill-animation;
+    }
   }
 }
 
+
+/* раздвижная панель настроек в sidebar */
+.menu-panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  &__content{
+    padding: 20px 15px;
+  }
+}
+
+
+/* лютый костылью Анимарование поворота стрелочки */
+.adapt {
+  transform: rotate(90deg);
+  transition: .2s transform ease-in-out;
+}
