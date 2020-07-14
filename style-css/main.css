@@ -1612,6 +1612,7 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
+/* Секция навигации для главной страницы. На сотальных - это будет меню */
 @media screen and (max-width: 600px) {
   .main-content {
     flex-direction: column;

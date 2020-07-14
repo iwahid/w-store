@@ -1,12 +1,12 @@
 @import "base/variables";
 @import "base/base";
-@import "blocks/header";
-@import "blocks/header-select";
-@import "blocks/header-link";
-@import "blocks/header-nav";
-@import "blocks/header-mega-menu-link";
-@import "blocks/nav-dropdown";
 
+@import "blocks/header/header";
+@import "blocks/header/header-select";
+@import "blocks/header/header-link";
+@import "blocks/header/header-nav";
+@import "blocks/header/header-mega-menu-link";
+@import "blocks/header/nav-dropdown";
 
 @import "slider/swiper";
 @import "slider/default-styles";
@@ -17,7 +17,7 @@
 @import "blocks/main-content/banner";
 @import "blocks/main-content/main-tab";
 @import "blocks/main-content/cards";
-@import "blocks/rating";
+@import "blocks/common-parts/rating";
 @import "blocks/footer/footer";
 @import "blocks/common-parts/logo";
 @import "blocks/common-parts/social-links";
