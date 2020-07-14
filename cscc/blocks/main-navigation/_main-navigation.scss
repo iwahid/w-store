@@ -40,8 +40,10 @@
     margin-left: auto;
     transition: $fill-animation;
     fill: $icon-fill;
+    transform: rotate(-90deg);
     /* лютый костылью Анимарование поворота стрелочки */
     & svg{
+      
       transition: .2s transform ease-in-out;
     }
   }
@@ -107,6 +109,6 @@
 
 /* лютый костылью Анимарование поворота стрелочки */
 .adapt {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
   transition: .2s transform ease-in-out;
 }
