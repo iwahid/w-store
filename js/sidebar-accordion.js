@@ -1,9 +1,9 @@
-var acc = document.getElementsByClassName("main-navigation__item");
+var acc = document.getElementsByClassName("main-menu__item");
 var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("main-navigation__item_selected");
+    this.classList.toggle("main-menu__item_selected");
     var panel = this.nextElementSibling;
 
     /* анимирование поворота стрелочки */

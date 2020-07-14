@@ -1627,14 +1627,14 @@ button.swiper-pagination-bullet {
   }
 }
 
-.main__navigation {
+.main-menu {
   width: 100%;
   margin-bottom: 30px;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.main-navigation__item {
+.main-menu__item {
   display: flex;
   align-content: center;
   align-items: center;
@@ -1649,7 +1649,7 @@ button.swiper-pagination-bullet {
   /* стили при наведении и активном состоянии */
 }
 
-.main-navigation__item-icon {
+.main-menu__item-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1660,7 +1660,7 @@ button.swiper-pagination-bullet {
   fill: #b5b5b5;
 }
 
-.main-navigation__item-title {
+.main-menu__item-title {
   color: #808080;
   font-size: 13px;
   font-weight: 500;
@@ -1668,7 +1668,7 @@ button.swiper-pagination-bullet {
   transition: 0.2s ease-in;
 }
 
-.main-navigation__item-arrow-icon {
+.main-menu__item-arrow-icon {
   margin-left: auto;
   transition: 0.2s fill ease-in;
   fill: #b5b5b5;
@@ -1676,55 +1676,55 @@ button.swiper-pagination-bullet {
   /* лютый костылью Анимарование поворота стрелочки */
 }
 
-.main-navigation__item-arrow-icon svg {
+.main-menu__item-arrow-icon svg {
   transition: .2s transform ease-in-out;
 }
 
-.main-navigation__item:first-child {
+.main-menu__item:first-child {
   border-top: 1px solid transparent;
   border-radius: 6px 6px 0px 0px;
 }
 
-.main-navigation__item:last-child {
+.main-menu__item:last-child {
   border-bottom: 1px solid transparent;
   border-radius: 0 0 6px 6px;
 }
 
-.main-navigation__item:hover {
+.main-menu__item:hover {
   border-bottom: 2px solid #1875f0;
 }
 
-.main-navigation__item:hover .main-navigation__item-icon {
+.main-menu__item:hover .main-menu__item-icon {
   fill: #1875f0;
   transition: 0.2s fill ease-in;
 }
 
-.main-navigation__item:hover .main-navigation__item-title {
+.main-menu__item:hover .main-menu__item-title {
   color: #1875f0;
   transition: 0.2s ease-in;
 }
 
-.main-navigation__item:hover .main-navigation__item-arrow-icon {
+.main-menu__item:hover .main-menu__item-arrow-icon {
   fill: #1875f0;
   transition: 0.2s fill ease-in;
 }
 
-.main-navigation__item_selected {
+.main-menu__item_selected {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid #1875f0;
 }
 
-.main-navigation__item_selected .main-navigation__item-icon {
+.main-menu__item_selected .main-menu__item-icon {
   fill: #1875f0;
   transition: 0.2s fill ease-in;
 }
 
-.main-navigation__item_selected .main-navigation__item-title {
+.main-menu__item_selected .main-menu__item-title {
   color: #1875f0;
   transition: 0.2s ease-in;
 }
 
-.main-navigation__item_selected .main-navigation__item-arrow-icon {
+.main-menu__item_selected .main-menu__item-arrow-icon {
   fill: #1875f0;
   transition: 0.2s fill ease-in;
 }

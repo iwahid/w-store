@@ -1,11 +1,10 @@
-.main__navigation {
+.main-menu{
   width: 100%;
   margin-bottom: 30px;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
-
-.main-navigation__item {
+.main-menu__item {
   display: flex;
   align-content: center;
   align-items: center;
@@ -61,15 +60,15 @@
   &:hover {
     border-bottom: 2px solid $blue;
 
-    .main-navigation__item-icon {
+    .main-menu__item-icon {
       fill: $blue;
       transition: $fill-animation;
     }
-    .main-navigation__item-title {
+    .main-menu__item-title {
       color: $blue;
       transition: $text-animation;
     }
-    .main-navigation__item-arrow-icon {
+    .main-menu__item-arrow-icon {
       fill: $blue;
       transition: $fill-animation;
     }
@@ -79,15 +78,15 @@
   &_selected {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid $blue;
-    .main-navigation__item-icon {
+    .main-menu__item-icon {
       fill: $blue;
       transition: $fill-animation;
     }
-    .main-navigation__item-title {
+    .main-menu__item-title {
       color: $blue;
       transition: $text-animation;
     }
-    .main-navigation__item-arrow-icon {
+    .main-menu__item-arrow-icon {
       fill: $blue;
       transition: $fill-animation;
     }
