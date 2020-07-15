@@ -1,0 +1,71 @@
+
+.checkbox {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 1.5em;
+	cursor: pointer;
+  
+  &__input {
+    position: absolute;
+    -webkit-appearance: none; /* прячет чекбокс */
+    transition: background-color .2s, border-color .2s;
+    /* когда он чекнутый */
+    &:checked + .checkbox__box {
+      background-color: $blue;
+      /* галочку указываю через svg. Но так же её можно заинлайнить прям ов CSS для критических случаев */
+      background-image: url("./../../../../img/common-parts/inputs/check-box/done_icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+    }
+    /* при фокусировке. Только для навигации с клавиатуры */
+    &:focus + .checkbox__box {
+      background-color: white;
+      border: 1px solid $blue;
+    }
+    &:checked:focus + .checkbox__box {
+      background-color: $blue;
+      
+      border: 1px solid $blue;
+    }
+    /* задизабленные.*/
+    &:disabled + .checkbox__box {
+      background-color: $disabled; 
+      border: none;
+	    cursor: default;
+    }
+    &:disabled:checked + .checkbox__box {
+      background-color: $disabled; 
+      background-image: url("./../../../../img/common-parts/inputs/check-box/done_icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+	    cursor: default;
+    }
+
+    /* работа с лейблом */
+    &:checked ~.checkbox__label {
+      color: $blue;
+    }
+    &:disabled:checked ~.checkbox__label {
+      color: $disabled;
+      cursor: default;
+    }
+    &:disabled ~.checkbox__label {
+      color: $disabled;
+      cursor: default;
+    }
+
+  }
+  &__box {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin-left: -1.5em;
+    background-color: white;
+    border: 2px solid $gray;
+    border-radius: 4px;
+    transition: background-color .2s, border-color .2s, ;
+  }
+}

@@ -7,6 +7,10 @@
 }
 .main-content {
   display: flex;
+  margin-bottom: 30px;
+  &__banner {
+    height: 330px;
+  }
 }
 .main-content__column-left {
   width: 255px;

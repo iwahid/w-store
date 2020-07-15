@@ -1,0 +1,82 @@
+.checkbox-radio-group{
+  margin: 20px 0;
+}
+.checkbox-radio{
+  display: block;
+  margin: 10px 0;
+
+  & input {
+  
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+  }
+
+  &__label {
+    position: relative;
+    padding: 0 0 0 1.5em;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      border: 1px solid #CDD1DA;
+      border-radius: 50%;
+      background: #FFF;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -0.5px;
+      left: 3px;
+      width: 0.8em;
+      height: 0.8em;
+      border-radius: 50%;
+      background: $blue;
+      opacity: 0;
+      transition: .2s;
+    }
+  }
+
+  & input:checked + .checkbox-radio__label:after {
+    opacity: 1;
+  }
+
+  & input:focus + .checkbox-radio__label:before {
+    box-shadow: 0 0 0 1px $blue;
+  }
+
+  /* стилизация лейблов */
+  & input:checked ~.checkbox-radio__label {
+    color: $blue;
+  }
+  & input:disabled:checked ~.checkbox-radio__label {
+    color: $disabled;
+    cursor: default;
+  }
+  & input:disabled ~.checkbox-radio__label {
+    color: $disabled;
+    cursor: default;
+  }
+
+
+  /* disabled */
+  & input:disabled+ .checkbox-radio__label:after {
+    opacity: 0;
+  }
+
+  & input:disabled:checked + .checkbox-radio__label:before {
+    opacity: 1;
+    border: 1px solid $disabled;
+  }
+  & input:disabled:checked + .checkbox-radio__label:after {
+    opacity: 1;
+    background-color: $disabled;
+  } 
+}
