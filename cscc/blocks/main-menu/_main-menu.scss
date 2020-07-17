@@ -1,9 +1,10 @@
-.main-menu{
+.main-menu {
   width: 100%;
   margin-bottom: 30px;
   border-radius: 6px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
+
 .main-menu__item {
   display: flex;
   align-content: center;
@@ -32,7 +33,6 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 30px;
-
     transition: $text-animation;
   }
   &-arrow-icon {
@@ -73,7 +73,6 @@
       transition: $fill-animation;
     }
   }
-  
 
   &_selected {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -93,7 +92,6 @@
   }
 }
 
-
 /* раздвижная панель настроек в sidebar */
 .menu-panel {
   background-color: white;
@@ -112,7 +110,6 @@
     word-break: break-all;
   }
 }
-
 
 /* лютый костылью Анимарование поворота стрелочки */
 .adapt {
