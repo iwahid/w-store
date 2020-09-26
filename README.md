@@ -2,4 +2,4 @@
 
  HTML coding of the online store homepage
  ___
-#### https://iwahid.github.io/resume/#works-anchor
+#### https://iwahid.github.io/resume
